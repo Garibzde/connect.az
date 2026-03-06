@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'connect-red': '#dc2626',
+              'connect-red-dark': '#b91c1c',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-gray-50">
+    <header
+      id="fixed"
+      class="bg-white sticky top-0 z-50 border-b border-gray-200 shadow-sm"
+    >
+      <nav class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <div class="flex items-center gap-2">
+            <a href="#" class="text-gray-800 text-xl font-bold">
+              <img src="img/logo.png" alt="logo" class="h-12 w-auto object-contain" />
+            </a>
+             <a href="tel:159" class="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-black rounded-lg transition duration-300 font-medium">
+              <i class="fa-solid fa-phone text-lg"></i>
+              <span class="">159</span>
+            </a>
+          </div>
+
+          <!-- desltop  Menu -->
+          <div class="hidden lg:flex items-center gap-4">
+            
+            <div class="group relative">
+              <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-connect-red hover:bg-gray-100 rounded-lg transition-all">
+                Xidmətlər
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+              </button>
+              <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-xl py-2 z-50 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 -translate-y-2 group-hover:translate-y-0">
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Fiber-optik internet</a>
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Efir-kabel (rəqəmsal tv)</a>
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">NNTV</a>
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Qoşulma</a>
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Texniki servis</a>
+              </div>
+            </div>
+
+           
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-connect-red hover:bg-gray-100 rounded-lg transition-all">
+              Tariflər
+            </button>
+
+           
+            <div class="group relative">
+              <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-connect-red hover:bg-gray-100 rounded-lg transition-all">
+                Şirkət
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+              </button>
+              <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-xl py-2 z-50 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 -translate-y-2 group-hover:translate-y-0">
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Haqqımızda</a>
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Missiyamız</a>
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Vakansiyalar</a>
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Keyfiyyət Siyasəti</a>
+              </div>
+            </div>
+
+            
+            <div class="group relative">
+              <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-connect-red hover:bg-gray-100 rounded-lg transition-all">
+                Əlavə xidmətlər
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+              </button>
+              <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-xl py-2 z-50 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 -translate-y-2 group-hover:translate-y-0">
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Statik İP ünvan</a>
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">NNTV</a>
+                <a href="#" class="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-connect-red transition-colors">Servis xidməti</a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div class="flex items-center gap-3">
+           
+
+            
+            <div class="hidden lg:flex items-center gap-3">
+            
+              <button class="flex items-center gap-1.5 px-3 py-2 border border-gray-300 rounded-full text-gray-600 hover:border-connect-red hover:text-connect-red transition-all text-sm">
+                
+                <span>AZ</span>
+              </button>
+
+              
+              <a href="#" class="flex items-center gap-2 px-4 py-2.5 border-2 border-connect-red text-connect-red rounded-full hover:bg-connect-red hover:text-white transition-all text-sm font-semibold">
+                
+                <span class=" xl:inline">ŞƏXSİ KABİNET</span>
+              </a>
+
+             
+              <a href="#" class="flex items-center gap-2 px-4 py-2.5 bg-connect-red text-white rounded-full hover:bg-connect-red-dark transition-all text-sm font-semibold">
+                
+                <span class=" xl:inline">İndi qoşul</span>
+              </a>
+
+              <a href="#" class=" xl:flex items-center gap-2 px-4 py-2.5 border-2 border-gray-300 text-gray-600 rounded-full hover:border-connect-red hover:text-connect-red transition-all text-sm font-semibold">
+                SÜRƏT TESTİ
+              </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- mobil menu -->
+      <div id="mobile-menu" class="fixed inset-0 top-20 bg-red-600 z-40 lg:hidden overflow-y-auto transform -translate-x-full transition-transform duration-300">
+  <div class="px-4 py-6 space-y-2 text-white">          
+    
+      <div class="border-b border-white/20"> 
+        <button class="mobile-accordion-btn w-full flex items-center justify-between px-4 py-4 text-left text-white font-medium rounded-lg transition-colors hover:bg-white/10">
+          <span>Xidmətlər</span>
+          <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div class="mobile-accordion-content hidden px-4 pb-4 space-y-1">
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Fiber-optik internet</a>
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Efir-kabel (rəqəmsal tv)</a>
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">NNTV</a>
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Qoşulma</a>
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Texniki servis</a>
+        </div>
+      </div>
+
+      <div class="border-b border-white/20">
+        <a href="#" class="block px-4 py-4 text-white font-medium rounded-lg transition-colors hover:bg-white/10">Tariflər</a>
+      </div>
+
+            <div class="border-b border-white/20">
+        <button class="mobile-accordion-btn w-full flex items-center justify-between px-4 py-4 text-left text-white font-medium rounded-lg transition-colors hover:bg-white/10">
+          <span>Şirkət</span>
+          <i class="fa-solid fa-chevron-down text-white/80 transition-transform duration-300"></i>
+        </button>
+        <div class="mobile-accordion-content hidden px-4 pb-4 space-y-1">
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Haqqımızda</a>
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Missiyamız</a>
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Vakansiyalar</a>
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Keyfiyyət Siyasəti</a>
+        </div>
+      </div>
+
+            <div class="border-b border-white/20">
+        <button class="mobile-accordion-btn w-full flex items-center justify-between px-4 py-4 text-left text-white font-medium rounded-lg transition-colors hover:bg-white/10">
+          <span>Əlavə xidmətlər</span>
+          <i class="fa-solid fa-chevron-down text-white/80 transition-transform duration-300"></i>
+        </button>
+        <div class="mobile-accordion-content hidden px-4 pb-4 space-y-1">
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Statik İP ünvan</a>
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">NNTV</a>
+          <a href="#" class="block px-4 py-2 text-sm text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Servis xidməti</a>
+        </div>
+      </div>
+
+      
+      <div class="border-b border-white/20">
+        <a href="#" class="block px-4 py-4 text-white font-medium rounded-lg transition-colors hover:bg-white/10">Yeniliklər</a>
+      </div>
+
+      
+      <div class="border-b border-white/20">
+        <a href="#" class="block px-4 py-4 text-white font-medium rounded-lg transition-colors hover:bg-white/10">Ödəniş Üsulları</a>
+      </div>
+
+            <div class="border-b border-white/20">
+        <a href="#" class="block px-4 py-4 text-white font-medium rounded-lg transition-colors hover:bg-white/10">Əlaqə</a>
+      </div>
+
+      
+      <div class="pt-4 flex flex-col gap-3">
+        <div class="flex gap-3">
+          <a href="#" class="flex items-center justify-center gap-2 w-full px-4 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-all text-sm font-semibold">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            ŞƏXSİ KABİNET
+          </a>
+          <a href="#" class="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#e64c21] text-white border-2 border-white rounded-full hover:bg-[#d13d15] transition-all text-sm font-semibold">
+            İndi qoşul               
+          </a>
+        </div>
+      </div>
+
+      
+      <div class="pt-2 flex justify-center gap-2">
+        <a href="#" class="flex items-center justify-center gap-2 px-6 py-2 bg-white text-black rounded-lg hover:bg-gray-100 transition-all text-sm font-semibold">
+          AZE
+        </a>
+        <a href="#" class="flex items-center justify-center gap-2 px-6 py-2 bg-white text-black  rounded-lg hover:bg-white transition-all text-sm font-semibold">
+          ENG
+        </a>
+        <a href="#" class="flex items-center justify-center gap-2 px-6 py-2 bg-white text-black rounded-lg hover:bg-white transition-all text-sm font-semibold">
+          RU
+        </a>
+      </div>
+    </div>
+  </div>
+    </header>
+
+    <main class="max-w-[1400px] mx-auto px-4 py-8">
+      <h1 class="text-2xl font-bold text-gray-800">Sayt məzmunu buraya</h1>
+    </main>
+
+    <footer></footer>
+    
+    <script src="js/header.js " ></script>
+  </body>
+</html>
