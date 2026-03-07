@@ -1,0 +1,13 @@
+.drag-slider {
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .drag-slider.dragging {
+    cursor: grabbing;
+  }
+  
+  .drag-slider.dragging .drag-slider-track {
+    transition: none;
+  }
