@@ -10,4 +10,23 @@
   
   .drag-slider.dragging .drag-slider-track {
     transition: none;
-  }
+  }  
+    
+  
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .service-tab {
+        background-color: #EBEBEB;
+        color: #374151;
+    }
+    
+    .service-tab.active {
+        background-color: #E31E24;
+        color: white;
+    }

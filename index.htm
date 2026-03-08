@@ -286,8 +286,7 @@
           </div>
         </div>
       </section>
-      <!--two services-->
-      
+      <!--two services-->      
       <section id="two-services" class="bg-[#252525] py-4 md:py-6 lg:py-8">
         <div class="max-w-[1500px] mx-auto px-2 sm:px-4 lg:px-6">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -331,8 +330,7 @@
 
           </div>
         </div>
-      </section>
-      
+      </section>      
       <!--innovations-->
       <section id="innovations" class="py-20 bg-white">
         <div class="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -380,7 +378,99 @@
           </div>
         </div>
       </section>
+      <!--services-->
+      <section class="py-20 bg-[#F2F2F2]">
+          <div class="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="mb-10 text-center">
+                  <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Xidmətlər</h2>
+              </div>
 
+              <div class="relative mb-10 px-12 md:px-0">
+                  <button onclick="prevService()" class="absolute left-0 md:-left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center  hover:bg-gray-50 transition-colors">
+                      <i class="fa-solid fa-arrow-left"></i>
+                  </button>
+
+                  <div id="tabsContainer" class="flex justify-center  gap-3 overflow-x-auto scrollbar-hide py-2" style="scroll-behavior: smooth;">
+                      <button onclick="switchService(0)" class="service-tab flex-shrink-0 px-6 md:px-8 py-3 rounded-full text-sm font-medium transition-all" data-index="0">
+                          NNTV
+                      </button>
+                      <button onclick="switchService(1)" class="service-tab flex-shrink-0 px-6 md:px-8 py-3 rounded-full text-sm font-medium transition-all" data-index="1">
+                          Qoşulma
+                      </button>
+                      <button onclick="switchService(2)" class="service-tab flex-shrink-0 px-6 md:px-8 py-3 rounded-full text-sm font-medium transition-all" data-index="2">
+                          Texniki servis
+                      </button>
+                      <button onclick="switchService(3)" class="service-tab flex-shrink-0 px-6 md:px-8 py-3 rounded-full text-sm font-medium transition-all" data-index="3">
+                          Efir-kabel (rəqəmsal tv)
+                      </button>
+                      <button onclick="switchService(4)" class="service-tab flex-shrink-0 px-6 md:px-8 py-3 rounded-full text-sm font-medium transition-all" data-index="4">
+                          Fiber-optik internet
+                      </button>
+                  </div>
+
+                  <button onclick="nextService()" class="absolute right-0 md:-right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-gray-50 transition-colors">
+                      <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+              </div>
+
+              <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
+                  <div class="grid md:grid-cols-2 gap-0">
+                      <div class="relative h-64 sm:h-80 md:h-auto min-h-[300px] md:min-h-[400px] bg-white flex items-center justify-center p-4 sm:p-8">
+                          <img id="serviceImage" src="" alt="Service" class="max-w-full max-h-[250px] sm:max-h-[300px] md:max-h-[350px] object-contain">
+                      </div>
+
+                      <div class="p-6 sm:p-10 md:p-12 lg:p-16 flex flex-col justify-center">
+                          <h3 id="serviceTitle" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6"></h3>
+                          <p id="serviceDesc" class="text-gray-600 mb-6 md:mb-10 leading-relaxed text-sm sm:text-base"></p>
+                          <button class="inline-flex items-center justify-center px-6 sm:px-8 py-3 bg-[#E31E24] text-white rounded-full hover:bg-[#c41a1f] transition-colors font-medium text-sm w-fit min-w-[120px] sm:min-w-[140px]">
+                              Ətraflı
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+    <!--app downland-->
+      <section class="bg-white py-20" id="app"> 
+        <div class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">                
+                
+              
+                <div class="flex justify-center  lg:w-1/2">             
+                    <img src="assets/img/phone.png" alt="phone image" class="max-w-[280px] sm:max-w-[320px] lg:max-w-[400px] w-full h-auto object-contain">
+                </div>     
+                
+                
+                <div class=" lg:w-1/2 text-center lg:text-left">
+                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6">myConnect App</h2>
+                    <p class="text-gray-600 text-lg lg:text-xl mb-10 max-w-lg mx-auto lg:mx-0">
+                        Android və IOS üçün myConnect mobil tətbiqini yükləyin
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center lg:items-start gap-6 sm:gap-8">
+                        
+                      <img src="assets/img/qrcode.png" alt="QR Code" class="w-28 h-28 flex-shrink-0"> 
+                      
+                      <div class="flex flex-col gap-3">
+                        <div class="text-center sm:text-left">
+                          <p class="text-sm font-semibold text-gray-900">myConnect App yüklə</p>
+                          <p class="text-xs text-gray-500 mb-3">10000+ yükləmə</p>
+                        </div>
+                        
+                            <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                                <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-[#E31E24] text-white rounded-full hover:bg-[#c41a1f] transition-colors text-sm font-medium min-w-[140px]">
+                                  </i> Android üçün
+                                </a>
+                                <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-[#E31E24] text-white rounded-full hover:bg-[#c41a1f] transition-colors text-sm font-medium min-w-[140px]">
+                                    IOS üçün
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+      </section>
       
     </main>
 
@@ -406,5 +496,6 @@
     <script src="assets/js/header.js"></script>
     <script src="assets/js/headerslider.js"></script>
     <script src="assets/js/twoservices.js"></script>
+    <script src="assets/js/services.js"></script>
   </body>
 </html> 
