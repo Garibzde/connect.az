@@ -712,11 +712,6 @@ video {
   aspect-ratio: 16/10;
 }
 
-.size-2 {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -1177,14 +1172,6 @@ video {
   padding-top: 1rem;
 }
 
-.pr-2 {
-  padding-right: 0.5rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1510,10 +1497,6 @@ video {
 
   .sm\:flex-row {
     flex-direction: row;
-  }
-
-  .sm\:flex-col {
-    flex-direction: column;
   }
 
   .sm\:gap-8 {
