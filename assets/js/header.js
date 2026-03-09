@@ -2,6 +2,7 @@
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       const menuIcon = document.getElementById('menu-icon');
+      const currentYearElem = document.getElementById('f-year');
       let isMenuOpen = false;
 
       mobileMenuBtn.addEventListener('click', () => {
@@ -58,6 +59,7 @@
           isMenuOpen = false;
         }
       });
+      currentYearElem.textContent = `© Copyright ${new Date().getFullYear()}. Bütün hüquqları qorunur`;
 
       
       

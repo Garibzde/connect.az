@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect.az</title>
+    <!--favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!--font awesome -->
     <link
     rel="stylesheet"
@@ -17,9 +20,8 @@
     href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <!--my css-->
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/headerslider.css"/>
-    <link rel="stylesheet" href="assets/css/twoservices.css">
+    <link rel="stylesheet" href="assets/css/reset.css" />    
+    <link rel="stylesheet" href="assets/css/index.css">
   </head>
   
   <body class="bg-gray-50">
@@ -286,6 +288,824 @@
           </div>
         </div>
       </section>
+      <!--rates-->
+      <section class="bg-[#F5F5F5] py-20" id="rates">
+          <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">       
+              <div class="text-center mb-8">
+                  <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Tariflər</h2>
+                  <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                      Connect şirkətinin təklif etdiyi internet xidmətlərindən yararlanmaq üçün öz limitinizsiz tarifinizi seçin və bizə zəng edin!
+                  </p>
+              </div>
+
+              <div class="flex flex-col items-center gap-6 mb-10">            
+                  <div id="tabsContainer" class="flex flex-wrap justify-center gap-2 sm:gap-4">
+                      <button onclick="switchTab('gpon')" class="tarif-tab active px-4 py-2 text-sm font-semibold text-gray-900 border-b-2 border-gray-900 transition-all" data-tab="gpon">
+                          GPON
+                      </button>
+                      <button onclick="switchTab('ektv')" class="tarif-tab px-4 py-2 text-sm font-semibold text-gray-500 hover:text-gray-700 transition-all" data-tab="ektv">
+                          EKTV
+                      </button>
+                      <button onclick="switchTab('nntv')" class="tarif-tab px-4 py-2 text-sm font-semibold text-gray-500 hover:text-gray-700 transition-all" data-tab="nntv">
+                          NNTV
+                      </button>
+                      <button onclick="switchTab('nntv-mobile')" class="tarif-tab px-4 py-2 text-sm font-semibold text-gray-500 hover:text-gray-700 transition-all" data-tab="nntv-mobile">
+                          NNTV MOBILE
+                      </button>
+                  </div>
+
+                  <div class="flex items-center gap-3">
+                      <span id="labelFerdi" class="text-sm font-medium text-gray-900">Fərdi</span>
+                      <button onclick="toggleType()" class="relative w-14 h-7 bg-gray-300 rounded-full transition-colors" id="toggleBtn">
+                          <span class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full shadow transition-transform" id="toggleCircle"></span>
+                      </button>
+                      <span id="labelBiznes" class="text-sm font-medium text-gray-500">Biznes</span>
+                  </div>
+              </div>
+
+              <div class="relative">
+                  <button onclick="scrollCards('left')" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full shadow flex items-center justify-center hover:bg-white transition-colors">
+                      <i class="fa-solid fa-chevron-left text-gray-600"></i>
+                  </button>
+
+                  <div id="cardsContainer" class="flex gap-4 overflow-x-auto scrollbar-hide px-12 py-4" style="scroll-behavior: smooth;">
+                      
+                      <!-- GPON Fərdi -->
+                      <div class="tarif-cards gpon ferdi flex gap-4">
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">GPON 100</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">100</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/middle.jpg" alt="speed" class="w-10 h-10 object-contain">
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">100 Mb/s</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">25</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">GPON 150</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">150</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/middle.jpg" alt="speed" class="w-10 h-10 object-contain">  
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">150 Mb/s</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">30</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">GPON 250</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">250</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/middle.jpg" alt="speed" class="w-10 h-10 object-contain">
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">250 Mb/s</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">36</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">GPON 500</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">500</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/max.jpg" alt="speed" class="w-10 h-10 object-contain">
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">500 Mb/s</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">40</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">GPON 750</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">750</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/max.jpg" alt="speed" class="w-10 h-10 object-contain">
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">750 Mb/s</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">45</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">GPON 1000</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">1000</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/max.jpg" alt="speed" class="w-10 h-10 object-contain">
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">1000 Mb/s</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">50</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- GPON Biznes -->
+                      <div class="tarif-cards gpon biznes hidden flex gap-4">
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-gray-900 p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">BIZNES 100</span>
+                                  <span class="bg-white text-gray-900 text-xs px-3 py-1 rounded-full font-medium">Biznes</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">100</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/middle.jpg" alt="speed" class="w-10 h-10 object-contain">  
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">100 Mb/san</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">30</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-gray-900 p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">BIZNES 150</span>
+                                  <span class="bg-white text-gray-900 text-xs px-3 py-1 rounded-full font-medium">Biznes</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">150</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/middle.jpg" alt="speed" class="w-10 h-10 object-contain">  
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">150 Mb/san</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">35</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-gray-900 p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">BIZNES 250</span>
+                                  <span class="bg-white text-gray-900 text-xs px-3 py-1 rounded-full font-medium">Biznes</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">250</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/middle.jpg" alt="speed" class="w-10 h-10 object-contain">  
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">250 Mb/san</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">41</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-gray-900 p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">BIZNES 500</span>
+                                  <span class="bg-white text-gray-900 text-xs px-3 py-1 rounded-full font-medium">Biznes</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">500</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/max.jpg" alt="speed" class="w-10 h-10 object-contain">  
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">500 Mb/san</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">48</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-gray-900 p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">BIZNES 750</span>
+                                  <span class="bg-white text-gray-900 text-xs px-3 py-1 rounded-full font-medium">Biznes</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">750</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/max.jpg" alt="speed" class="w-10 h-10 object-contain">  
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">750 Mb/san</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">53</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-gray-900 p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">BIZNES 1000</span>
+                                  <span class="bg-white text-gray-900 text-xs px-3 py-1 rounded-full font-medium">Biznes</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">1000</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/max.jpg" alt="speed" class="w-10 h-10 object-contain">  
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">1000 Mb/san</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">58</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- EKTV kartları -->
+                      <div class="tarif-cards ektv ferdi hidden flex gap-4">
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">EKTV tarif</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">-</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/middle.jpg" alt="speed" class="w-10 h-10 object-contain">  
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">-</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">10</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">EKTV tarif</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">-</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/middle.jpg" alt="speed" class="w-10 h-10 object-contain">  
+
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">-</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">10</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">EKTV tarif</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center gap-2 mb-4">
+                                      <span class="text-4xl font-bold text-gray-900">-</span>
+                                      <span class="text-sm text-gray-500">Mb/s</span>
+                                      <img src="assets/img/middle.jpg" alt="speed" class="w-10 h-10 object-contain">
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">-</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">10</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- NNTV kartları -->
+                      <div class="tarif-cards nntv ferdi hidden flex gap-4">
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">NNTV İdman</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center mb-4">
+                                      <img src="assets/img/nntv.webp" alt="speed" class="w-12 h-12 object-contain">
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">1 ay</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">1.50</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          
+                      </div>
+
+                      <!-- NNTV MOBILE kartları -->
+                      <div class="tarif-cards nntv-mobile ferdi hidden flex gap-4">
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">NNTV Aylıq 200+</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center mb-4">
+                                      <i class="fa-solid fa-mobile-screen text-4xl text-gray-900"></i>
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">1 Ay</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">4</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">NNTV Günlük 200+</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center mb-4">
+                                      <i class="fa-solid fa-mobile-screen text-4xl text-gray-900"></i>
+                                  </div>          
+                                  <p class="text-xs text-gray-500 mb-4">1 Gün</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">0.2</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">NNTV Xanım</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center mb-4">
+                                      <i class="fa-solid fa-mobile-screen text-4xl text-gray-900"></i>
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">1 Ay</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">1.50</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">NNTV Uşaq</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center mb-4">
+                                      <i class="fa-solid fa-mobile-screen text-4xl text-gray-900"></i>
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">1 Ay</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">1.50</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">NNTV İdman</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center mb-4">
+                                      <i class="fa-solid fa-mobile-screen text-4xl text-gray-900"></i>
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">1 Ay</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">1.50</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">NNTV Film</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center mb-4">
+                                      <i class="fa-solid fa-mobile-screen text-4xl text-gray-900"></i>
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">1 Ay</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">1.50</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg">
+                              <div class="bg-[#E31E24] p-4 flex justify-between items-center">
+                                  <span class="text-white font-bold text-lg">NNTV Xəbər</span>
+                                  <span class="bg-white text-[#E31E24] text-xs px-3 py-1 rounded-full font-medium">Fərdi</span>
+                              </div>
+                              <div class="p-6 text-center">
+                                  <div class="flex items-center justify-center mb-4">
+                                      <i class="fa-solid fa-mobile-screen text-4xl text-gray-900"></i>
+                                  </div>
+                                  <p class="text-xs text-gray-500 mb-4">1 Ay</p>
+                                  <div class="mb-6">
+                                      <span class="text-3xl font-bold text-gray-900">1.50</span>
+                                      <span class="text-sm text-gray-500"> AZN /AY</span>
+                                  </div>
+                                  <button class="w-full py-3 bg-[#E31E24] text-white rounded-lg hover:bg-[#c41a1f] transition-colors text-sm font-medium">
+                                      İndi qoşul
+                                  </button>
+                              </div>
+                          </div>
+                          
+                      </div>
+
+                  </div>
+
+                  <button onclick="scrollCards('right')" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full shadow flex items-center justify-center hover:bg-white transition-colors">
+                      <i class="fa-solid fa-chevron-right text-gray-600"></i>
+                  </button>
+              </div>
+
+          </div>
+      </section>
+      <!--calc-->
+      <section id="calc" class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">            
+            <div class="mb-10">
+            <h2 class="text-4xl font-bold text-gray-900 mb-2">Kalkulyator</h2>
+            <p class="text-gray-600 text-lg">İstədiyin tarifləri seç və nəticələri gör</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">           
+            <div class="space-y-4" id="accordion-container">               
+                
+                <div class="accordion-item rounded-lg overflow-hidden shadow-lg">
+                <button onclick="toggleAccordion('internet')" class="w-full bg-gradient-to-r from-gray-900 via-red-800 to-red-600 text-white p-4 flex justify-between items-center hover:from-gray-800 hover:via-red-700 hover:to-red-500 transition-all duration-300">
+                    <span class="text-lg font-semibold">İnternet tarifini seç</span>
+                    <i class="fa-solid fa-chevron-down transition-transform duration-300" id="accordion-icon-internet"></i>
+                </button>
+                <div id="content-internet" class="hidden bg-white border border-gray-200 border-t-0">
+                    
+                    <div class="flex border-b border-gray-200 bg-gray-50">
+                    <button onclick="switchTab('internet', 'ferdi')" id="tab-ferdi" class="flex-1 py-3 px-4 text-sm font-medium text-white bg-gray-900 border-b-2 border-gray-900 transition-colors">Fərdi - GPON</button>
+                    <button onclick="switchTab('internet', 'biznes')" id="tab-biznes" class="flex-1 py-3 px-4 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Biznes - GPON</button>
+                    <button onclick="switchTab('internet', 'adsl')" id="tab-adsl" class="flex-1 py-3 px-4 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">ADSL</button>
+                    </div>
+                    
+                   
+                    <div id="content-ferdi" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="GPON 100" data-price="25" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">GPON 100</div>
+                        <div class="text-red-600 text-sm">25 AZN <span class="text-gray-500">100 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="GPON 150" data-price="30" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">GPON 150</div>
+                        <div class="text-red-600 text-sm">30 AZN <span class="text-gray-500">150 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="GPON 250" data-price="36" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">GPON 250</div>
+                        <div class="text-red-600 text-sm">36 AZN <span class="text-gray-500">250 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="GPON 500" data-price="40" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">GPON 500</div>
+                        <div class="text-red-600 text-sm">40 AZN <span class="text-gray-500">500 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="GPON 750" data-price="45" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">GPON 750</div>
+                        <div class="text-red-600 text-sm">45 AZN <span class="text-gray-500">750 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="GPON 1000" data-price="50" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">GPON 1000</div>
+                        <div class="text-red-600 text-sm">50 AZN <span class="text-gray-500">1000 mb/s</span></div>
+                        </div>
+                    </label>
+                    </div>
+
+                    
+                    <div id="content-biznes" class="hidden p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="BIZNES 100" data-price="30" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">BIZNES 100</div>
+                        <div class="text-red-600 text-sm">30 AZN <span class="text-gray-500">100 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="BIZNES 150" data-price="35" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">BIZNES 150</div>
+                        <div class="text-red-600 text-sm">35 AZN <span class="text-gray-500">150 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="BIZNES 250" data-price="41" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">BIZNES 250</div>
+                        <div class="text-red-600 text-sm">41 AZN <span class="text-gray-500">250 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="BIZNES 500" data-price="48" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">BIZNES 500</div>
+                        <div class="text-red-600 text-sm">48 AZN <span class="text-gray-500">500 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="BIZNES 750" data-price="53" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">BIZNES 750</div>
+                        <div class="text-red-600 text-sm">53 AZN <span class="text-gray-500">750 mb/s</span></div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="internet" value="BIZNES 1000" data-price="58" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">BIZNES 1000</div>
+                        <div class="text-red-600 text-sm">58 AZN <span class="text-gray-500">1000 mb/s</span></div>
+                        </div>
+                    </label>
+                    </div>
+
+                    <div id="content-adsl" class="hidden p-12 text-center">
+                    <div class="text-gray-400 mb-2">
+                        <i class="fa-solid fa-triangle-exclamation text-4xl"></i>
+                    </div>
+                    <p class="text-gray-500 text-lg">ADSL xidməti hazırda mövcud deyil</p>
+                    <p class="text-gray-400 text-sm mt-1">Zəhmət olmasa, GPON tariflərdən seçin</p>
+                    </div>
+                </div>
+                </div>  
+
+              
+                <div class="accordion-item rounded-lg overflow-hidden shadow-lg">
+                <button onclick="toggleAccordion('tv')" class="w-full bg-gradient-to-r from-red-700 via-red-600 to-gray-900 text-white p-4 flex justify-between items-center hover:from-red-600 hover:via-red-500 hover:to-gray-800 transition-all duration-300">
+                    <span class="text-lg font-semibold">TV tarifini seç</span>
+                    <i class="fa-solid fa-chevron-down transition-transform duration-300" id="accordion-icon-tv"></i>
+                </button>
+                <div id="content-tv" class="hidden bg-white border border-gray-200 border-t-0">
+                    
+                    <div class="flex border-b border-gray-200 bg-gray-50">
+                    <button onclick="switchTvTab('nntv')" id="tv-tab-nntv" class="flex-1 py-3 px-4 text-sm font-medium text-white bg-gray-900 border-b-2 border-gray-900 transition-colors">NNTV</button>
+                    <button onclick="switchTvTab('ektv')" id="tv-tab-ektv" class="flex-1 py-3 px-4 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">EKTV</button>
+                    </div>
+
+                    
+                    <div id="tv-content-nntv" class="p-6">
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors max-w-md">
+                        <input type="radio" name="tv" value="NNTV IPTV" data-price="10" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">NNTV IPTV</div>
+                        <div class="text-red-600 text-sm font-medium">10 AZN</div>
+                        </div>
+                    </label>
+                    </div>
+
+                 
+                    <div id="tv-content-ektv" class="hidden p-6">
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors max-w-md">
+                        <input type="radio" name="tv" value="EKTV IPTV" data-price="12" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">EKTV IPTV</div>
+                        <div class="text-red-600 text-sm font-medium">12 AZN</div>
+                        </div>
+                    </label>
+                    </div>
+                </div>
+                </div>
+
+               
+                <div class="accordion-item rounded-lg overflow-hidden shadow-lg">
+                <button onclick="toggleAccordion('mobile')" class="w-full bg-gradient-to-r from-gray-900 via-red-800 to-red-600 text-white p-4 flex justify-between items-center hover:from-gray-800 hover:via-red-700 hover:to-red-500 transition-all duration-300">
+                    <span class="text-lg font-semibold">NNTV Mobile tarifini seç</span>
+                    <i class="fa-solid fa-chevron-down transition-transform duration-300" id="accordion-icon-mobile"></i>
+                </button>
+                <div id="content-mobile" class="hidden bg-white border border-gray-200 border-t-0 p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="mobile" value="NNTV Xanim" data-price="1.50" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">NNTV Xanim</div>
+                        <div class="text-red-600 text-sm">1.50 AZN</div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="mobile" value="NNTV Film" data-price="1.50" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">NNTV Film</div>
+                        <div class="text-red-600 text-sm">1.50 AZN</div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="mobile" value="NNTV Idman" data-price="1.50" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">NNTV Idman</div>
+                        <div class="text-red-600 text-sm">1.50 AZN</div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="mobile" value="NNTV Uşaq" data-price="1.50" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">NNTV Uşaq</div>
+                        <div class="text-red-600 text-sm">1.50 AZN</div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="mobile" value="NNTV Xəbər" data-price="1.50" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">NNTV Xəbər</div>
+                        <div class="text-red-600 text-sm">1.50 AZN</div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors">
+                        <input type="radio" name="mobile" value="NNTV Aylıq 200+" data-price="4.00" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">NNTV Aylıq 200+</div>
+                        <div class="text-red-600 text-sm">4.00 AZN</div>
+                        </div>
+                    </label>
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors md:col-span-2">
+                        <input type="radio" name="mobile" value="NNTV Günlük 200+" data-price="0.20" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                        <div class="flex-1">
+                        <div class="font-semibold text-gray-900">NNTV Günlük 200+</div>
+                        <div class="text-red-600 text-sm">0.20 AZN</div>
+                        </div>
+                    </label>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Statik IP -->
+                <div class="accordion-item rounded-lg overflow-hidden shadow-lg">
+                <button onclick="toggleAccordion('ip')" class="w-full bg-gradient-to-r from-red-700 via-red-600 to-gray-900 text-white p-4 flex justify-between items-center hover:from-red-600 hover:via-red-500 hover:to-gray-800 transition-all duration-300">
+                    <span class="text-lg font-semibold">Statik IP tarifini seç</span>
+                    <i class="fa-solid fa-chevron-down transition-transform duration-300" id="accordion-icon-ip"></i>
+
+                </button>
+                <div id="content-ip" class="hidden bg-white border border-gray-200 border-t-0 p-6">
+                    <label class="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-red-50 transition-colors max-w-md">
+                    <input type="radio" name="ip" value="Statik IP" data-price="10" onchange="calculateTotal()" class="mt-1 w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+                    <div class="flex-1">
+                        <div class="font-semibold text-gray-900">Statik IP</div>
+                        <div class="text-red-600 text-sm font-medium">10 AZN</div>
+                    </div>
+                    </label>
+                </div>
+                </div>
+            </div>
+
+            <!-- Sağ tərəf - Qiymət kartı -->
+            <div class="lg:sticky lg:top-8 h-fit">
+                <div class="bg-gray-100 rounded-2xl p-8 shadow-lg border border-red-100">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6 text-center">Tarif qiymətin</h3>
+                
+                <div class="text-center mb-6">
+                    <div class="text-4xl font-bold text-gray-900 mb-2">
+                    <span id="total-price">0.00</span> AZN
+                    </div>
+                    <div class="h-px bg-gray-300 w-full my-4"></div>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="text-sm font-semibold text-gray-700 mb-3 uppercase tracking-wide">Tarifləriniz:</h4>
+                    <ul id="selected-items" class="space-y-2 text-gray-600">
+                    <li class="text-gray-400 italic text-sm">Hələ heç bir tarif seçilməyib</li>
+                    </ul>
+                </div>
+
+                <button class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95">
+                    İndi qoşul
+                </button>
+
+                
+                </div>
+            </div>
+            </div>
+        </div>
+
+      </section>
       <!--two services-->      
       <section id="two-services" class="bg-[#252525] py-4 md:py-6 lg:py-8">
         <div class="max-w-[1500px] mx-auto px-2 sm:px-4 lg:px-6">
@@ -474,7 +1294,106 @@
       
     </main>
 
-    <footer></footer>
+     <footer class="bg-[#f2f2f2] py-20">
+        <div class="max-w-[1400px] mx-auto px-2 sm:px-4 lg:px-6 py-10 ">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div>
+                    <h4 class="font-semibold text-black mb-5">Xidmətlər</h4>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Fiber-optik internet</a>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Efir-kabel (rəqəmsal tv)</a>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">NNTV</a>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Texniki servis</a>
+                    <a href="#" class="block text-gray-400 text-sm hover:text-gray-800 transition-colors">Qoşulma</a>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-black mb-5">Tariflər</h4>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Connect ADSL</a>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Connect GPON/FO</a>
+                    <a href="#" class="block text-gray-400 text-sm hover:text-gray-800 transition-colors">Connect TV</a>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-black mb-5">Şirkət</h4>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Haqqımızda</a>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Missiyamız</a>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Vakansiyalar</a>
+                    <a href="#" class="block text-gray-400 text-sm hover:text-gray-800 transition-colors">Keyfiyyət Siyasəti</a>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-black mb-5">Əlavə xidmətlər</h4>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Statik İP ünvan</a>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">NNTV</a>
+                    <a href="#" class="block text-gray-400 text-sm hover:text-gray-800 transition-colors">Servis xidməti</a>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-black mb-5">Əlavə məlumatlar</h4>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Yeniliklər</a>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Ödəniş üsulları</a>
+                    <a href="#" class="block text-gray-400 text-sm hover:text-gray-800 transition-colors">Tez-tez verilən suallar</a>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-black mb-5">Əlaqə</h4>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Müştəri xidməti</a>
+                    <a href="#" class="block text-gray-400 text-sm mb-3 hover:text-gray-800 transition-colors">Bizə müraciət</a>
+                    <a href="#" class="block text-gray-400 text-sm hover:text-gray-800 transition-colors">E-şikayət</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="">
+            <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 border-t  border-gray-300 border-b-0 border-l-0 border-r-0">
+                <div class="flex flex-wrap justify-between items-center gap-6">
+                    <div class="flex items-center gap-4">
+                        <img src="assets/img/logo.png" class="max-w-[120px]" alt="">
+                        <p class="text-gray-400 text-sm">Yeniliklər barədə daim məlumat almaq üçün bizi izləməyi unutmayın.</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-2 text-gray-600 text-sm">
+                            <i class="fa-solid fa-globe text-lg text-gray-600"></i>
+                            Azərbaycan
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-gray-400 hover:text-connect-red transition-colors">
+                                <i class="fa-brands fa-facebook-f text-gray-600 text-xl  hover:text-connect-red   "></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-connect-red transition-colors">
+                                <i class="fa-brands fa-square-instagram  text-gray-600 text-xl hover:text-connect-red"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-connect-red transition-colors">
+                                <i class="fa-brands fa-twitter text-gray-600 text-xl  hover:text-connect-red"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-connect-red transition-colors">
+                                <i class="fa-brands fa-linkedin-in text-gray-600 text-xl  hover:text-connect-red"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class=" border-gray-800">
+            <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-5">
+                <div class="flex flex-wrap justify-between items-center gap-4 text-sm text-gray-500">
+                    <div class="flex gap-6">
+                        <a href="https://wa.me/994555108848" class="flex items-center gap-2 hover:text-connect-red transition-colors">
+                            <i class="fa-brands fa-whatsapp text-xl text-gray-600"></i>
+                            WhatsApp: +994 55 510-88-48
+                        </a>
+                        <a href="tel:159" class="flex items-center gap-2 hover:text-connect-red transition-colors">
+                            <i class="fa-solid fa-phone text-xl text-gray-600" ></i>
+                            Əlaqə: 159
+                        </a>
+                    </div>
+                    <div class="flex flex-row items-center gap-2">
+                        <p>Site by</p>
+                        <img class="max-w-[100px]" src="assets/img/okmedia.png" alt="Okmedia">
+                    </div>
+                    <div id="f-year"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!--swiper-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -497,5 +1416,7 @@
     <script src="assets/js/headerslider.js"></script>
     <script src="assets/js/twoservices.js"></script>
     <script src="assets/js/services.js"></script>
+    <script src="assets/js/rates.js"></script>
+    <script src="assets/js/calc.js"></script>
   </body>
 </html> 

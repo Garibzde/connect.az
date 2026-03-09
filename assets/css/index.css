@@ -1,0 +1,143 @@
+/* Drag Slider */
+.drag-slider {
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.drag-slider.dragging {
+  cursor: grabbing;
+}
+
+.drag-slider.dragging .drag-slider-track {
+  transition: none;
+}
+
+/* Scrollbar Hide */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Service Tabs */
+.service-tab {
+  background-color: #EBEBEB;
+  color: #374151;
+}
+
+.service-tab.active {
+  background-color: #E31E24;
+  color: white;
+}
+
+/* Swiper */
+html, body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progress-circle {
+  transition: stroke-dashoffset 0.1s linear;
+  transform-origin: center;
+}
+
+/* Image Only Swiper Responsive */
+@media (max-width: 767px) {
+  .imageOnlySwiper .swiper-slide > div {
+    padding-bottom: 75% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .imageOnlySwiper .swiper-slide > div {
+    padding-bottom: 62.5% !important;
+  }
+}
+
+.imageOnlySwiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.imageOnlySwiper .swiper-pagination-bullet-active {
+  background: #e63946;
+  width: 20px;
+  border-radius: 4px;
+}
+
+/* Tarif Tabs */
+.tarif-tab.active {
+  color: #111827;
+  border-bottom-color: #111827;
+}
+
+.tarif-tab:not(.active) {
+  border-bottom: 2px solid transparent;
+}
+
+/* Sticky Header Fix - FIXED variant (daha etibarlı) */
+#fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* Main content üçün padding - header hündürlüyü qədər */
+main {
+  padding-top: 80px; /* Header hündürlüyü 80px təxmini */
+}
+
+/* Əgər header hündürlüyü dəyişirsə, responsive düzəliş */
+@media (max-width: 1023px) {
+  main {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-top: 60px;
+  }
+}
+
+/* Rates bölməsindəki potensial problemi aradan qaldır */
+#rates {
+  position: relative;
+  z-index: 1;
+}
+
+#cardsContainer {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  overflow-x: hidden;
+}
