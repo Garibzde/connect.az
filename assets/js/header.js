@@ -6,19 +6,13 @@
       let isMenuOpen = false;
 
       mobileMenuBtn.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
         
-        if (isMenuOpen) {
-          mobileMenu.classList.remove('-translate-x-full');
-          mobileMenu.classList.add('translate-x-0');
-          menuIcon.classList.remove('fa-bars');
-          menuIcon.classList.add('fa-xmark');
-        } else {
-          mobileMenu.classList.add('-translate-x-full');
-          mobileMenu.classList.remove('translate-x-0');
-          menuIcon.classList.remove('fa-xmark');
-          menuIcon.classList.add('fa-bars');
-        }
+        mobileMenu.classList.toggle('-translate-x-full');
+        mobileMenu.classList.toggle('translate-x-0');
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-xmark');       
+
+        
       });
 
       
@@ -38,14 +32,8 @@
             }
           });
           
-          
-          if (isOpen) {
-            content.classList.add('hidden');
-            icon.classList.remove('rotate-180');
-          } else {
-            content.classList.remove('hidden');
-            icon.classList.add('rotate-180');
-          }
+          content.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');         
         });
       });
 

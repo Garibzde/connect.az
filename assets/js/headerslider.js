@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
       
       const progressCircle = document.getElementById('progress-circle');
-      const progressText = document.getElementById('progress-text');
-      const currentSlideEl = document.getElementById('current-slide');
-      const totalSlidesEl = document.getElementById('total-slides');
+      const progressText = document.getElementById('progress-text');     
 
       const swiper = new Swiper(".mySwiper", {
         spaceBetween: 0,
@@ -26,16 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             const secondsLeft = Math.ceil(time / 1000);
-            progressText.textContent = secondsLeft;
+            progressText.textContent = this.realIndex + 1;
           },
-          slideChange() {
-            currentSlideEl.textContent = this.realIndex + 1;
-          },
-          init() {
-            
-            totalSlidesEl.textContent = this.slides.length ; 
-            currentSlideEl.textContent = this.realIndex + 1;
-          }
+          
         }
       });
 
