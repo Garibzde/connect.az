@@ -1,0 +1,158 @@
+ .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+        
+        .toggle-btn {
+            transition: all 0.3s ease;
+            background-color: #374151; 
+        }
+        
+        .toggle-btn.ferdi-mode {
+            background-color: #E31E24; 
+        }
+        
+        .toggle-circle {
+            transition: transform 0.3s ease;          
+            transform: translateX(28px); 
+        }
+        
+        .toggle-btn.ferdi-mode .toggle-circle {
+            transform: translateX(0); 
+        }
+        
+        .tarif-tab {
+            position: relative;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .tarif-tab.active {
+            color: #111827;
+            border-bottom-color: #111827;
+        }
+        
+        .card-bg-image {
+            position: absolute !important;
+            right: -80px !important;           
+            top: 0 !important;            
+            width: 65% !important;         
+            height: 100% !important;       
+            object-fit: cover !important; 
+            object-position: right center !important;
+            filter: grayscale(1) brightness(10) !important;
+            z-index: 0 !important;         
+            pointer-events: none !important;
+        }
+        
+        .swiper-container {
+            overflow: hidden !important;
+            position: relative;
+            width: 100%;
+        }
+        
+        .swiper-wrapper {
+            cursor: default !important;
+            user-select: none; 
+        }
+        
+        .swiper-container-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden; /* Bunu əlavə et - scrollbar üçün */
+        }
+        
+        .side-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 48px; /* pb-12 kompensasiyası */
+            width: calc((100% - 48px) / 3.5 * 0.28);
+            background-color: rgba(156, 163, 175, 0.4);
+            z-index: 10;
+            pointer-events: none;
+            backdrop-filter: grayscale(0.6) brightness(0.9);
+        }
+        
+        .left-overlay {
+            left: 0;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        
+        .right-overlay {
+            right: 0;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+        
+        @media (max-width: 1023px) {
+            .side-overlay {
+                display: none;
+            }
+        }
+        
+        .swiper-container-wrapper .swiper-button-next,
+        .swiper-container-wrapper .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            color: #374151;
+            background: rgba(255,255,255,0.9);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .swiper-container-wrapper .swiper-button-next:hover,
+        .swiper-container-wrapper .swiper-button-prev:hover {
+            background: #ffffff;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .swiper-container-wrapper .swiper-button-prev {
+            left: 0.5rem;
+        }
+        
+        .swiper-container-wrapper .swiper-button-next {
+            right: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .swiper-container-wrapper .swiper-button-prev {
+                left: 1rem;
+            }
+            .swiper-container-wrapper .swiper-button-next {
+                right: 1rem;
+            }
+        }
+        
+        .swiper-container-wrapper .swiper-button-next:after, 
+        .swiper-container-wrapper .swiper-button-prev:after {
+            display: none;
+        }
+        
+        .swiper-container-wrapper .swiper-button-disabled {
+            opacity: 0.3;
+        }
+        
+        @media (max-width: 768px) {
+            .swiper-container-wrapper .swiper-button-next,
+            .swiper-container-wrapper .swiper-button-prev {
+                display: none;
+            }
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
