@@ -12,7 +12,6 @@ function getStartIndex(selector) {
     const slidesCount = getSlidesCount(selector);
     if (slidesCount <= 1) return 0;
 
-    // İlk real kartdan başlasın
     return 0;
 }
 
@@ -33,7 +32,7 @@ function getSwiperConfig(key, selector) {
         slidesPerView: views.mobile,
         centeredSlides: !isSingleSlide,
         spaceBetween: 24,
-        loop: slidesCount > 4,
+        loop: true,
         speed: 500,
         initialSlide: 0,
         watchOverflow: true,
@@ -53,7 +52,7 @@ function getSwiperConfig(key, selector) {
                 spaceBetween: 20,
             },
             1024: {
-                slidesPerView: views.desktop,
+                slidesPerView: 3.5,
                 centeredSlides: !isSingleSlide,
                 spaceBetween: 24,
             },
